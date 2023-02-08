@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(6, 227, 165);
+}
+
+.chrosuol-container {
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;   
+}
+
+
+
+/* ---------------------------------------- */
+/* radio buttons */
+.chrosuol-container input[type="radio"]{
+    display: none;
+}
+.radio-symbol-container {
+    width: 100%;
+    position: absolute;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+
+}
+.radio--symbol {
+    border: 1px solid cyan;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+.radio--symbol:hover {
+    background-color: cyan;
+}
+
+#radio1:checked ~ .radio-symbol-container > .radio--symbol:nth-child(2){
+    background-color: cyan;
+}
+#radio2:checked ~ .radio-symbol-container > .radio--symbol:nth-child(3){
+    background-color: cyan;
+}
+#radio3:checked ~ .radio-symbol-container > .radio--symbol:nth-child(4){
+    background-color: cyan;
+}
+#radio4:checked ~ .radio-symbol-container > .radio--symbol:nth-child(5){
+    background-color: cyan;
+}
+
+.radio--symbol:not(:nth-child(5)){
+    margin-right: 40px;
+}
+
+.radio--symbol:first-child{
+    display: none;
+}
+.radio--symbol:last-child {
+    display: none;
+}
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+/* sliding buttons */
+.slide--btn{
+    z-index: 3;
+    font-size: 40px;
+    color: cyan;
+    cursor: pointer;
+}
+.slide--btn2 {
+    position: absolute;
+    top: 48%;
+    right: 5%;
+}
+.slide--btn1 {
+    position: absolute;
+    top: 48%;
+    left: 5%;
+}
+/* ---------------------------------------- */
+/* chrosuol and images */
+.chrosuol {
+    width: 600%;
+    height: 100%;
+    display: flex;
+    margin-left: -100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide > img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+/* ---------------------------------------- */
+
